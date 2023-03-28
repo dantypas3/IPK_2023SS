@@ -6,3 +6,5 @@ statistics
 *~
 # das Unterverzeichnis build/ (von CMake)
 build/
+#
+.idea/
