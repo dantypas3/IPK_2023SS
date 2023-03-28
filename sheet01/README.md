@@ -20,8 +20,9 @@ Es befinden sich wohl 1717 .h Dateien unter `/usr/include/` .
 `-l` von `wc` gibt nur die Anzahl an Zeilen (newline count) des Outputs von find aus.
 
 ```
-find /usr/include/ -name '*.h' | xargs cat | grep -E '^[[:space:]]*#include' | wc -l
+find /usr/include/ -name '*.h' | xargs grep -E '^[[:space:]]*#include' | wc -l
 ```
+(eine alte version hat noch cat benutzt, aber es funktioniert auch nur mit grep)
 
 xargs wendet cat auf alle gefundenen dateien an, der Output wird weiter an grep gegeben.
 
