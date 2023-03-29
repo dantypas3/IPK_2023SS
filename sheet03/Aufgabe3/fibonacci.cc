@@ -45,4 +45,5 @@ int main()
 	fibonacci_iter(n);
 	std::cout << "Rekursive Lösung: " << fibonacci_rec(n) << std::endl;
 
+	return 0;
 }
