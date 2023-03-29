@@ -45,7 +45,7 @@ int main()
 	}
 	else if (d == 0)
 	{
-		std::cout << "Es git nur eine Lösung. x = " << x(a,b,c,d) << std::endl;
+		std::cout << "Es git nur eine Lösung. x = " << x1(a,b,c,d) << std::endl;
 	}
 	else
 	{
