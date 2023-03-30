@@ -1,5 +1,6 @@
-# alle Dateien, die auf .o enden
+# kompilierte Programme
 *.o
+*.out
 # eine bestimmte Datei, z.B. ein Executable
 statistics
 # Sicherungskopien, die auf ~ enden
@@ -9,3 +10,7 @@ build/
 #
 .idea/
 cmake-build-debug/
+
+# Projekt dateien
+*.geany
+.vscode/
