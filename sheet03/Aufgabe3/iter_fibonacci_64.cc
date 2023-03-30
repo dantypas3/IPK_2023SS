@@ -1,10 +1,10 @@
 #include <iostream>
 
-int32_t fibonacci_iter (int32_t number)
+int64_t fibonacci_iter (int64_t number)
 {
-	int32_t f1 = 0;
-	int32_t f2 = 1;
-	int32_t fn;
+	int64_t f1 = 0;
+	int64_t f2 = 1;
+	int64_t fn;
 
 	if (number <= 1) {
 		return 0;
