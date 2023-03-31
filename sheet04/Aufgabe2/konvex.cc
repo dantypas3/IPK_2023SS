@@ -4,10 +4,12 @@
 #include <vector>
 #include <algorithm>    // contains std::sort
 
-std::vector<std::array<double, 2>> read_points_from_file(std::string filename) {
+typedef std::array<double, 2> point;        // um nicht den typen ausschreiben zu müssen, kann man ein alias definieren
+
+std::vector<point> read_points_from_file(std::string filename) {
     double x;
     double y;
-    std::vector<std::array<double, 2>> data;
+    std::vector<point> data;        // point ist alias von std::array<double, 2> wird nur als Beispiel verwendet, weiter unten nicht mehr
     std::ifstream inFile;
     inFile.open(filename);
 

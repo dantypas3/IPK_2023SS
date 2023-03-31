@@ -2,6 +2,9 @@
 #include <cmath>
 #include <vector>
 
+// durchsuchen des vectors nach dem größten und kleinsten element
+// man könnte auch das ganze array sortieren und dann das erste und letzte element ausgeben
+// ist nur ineffizienter.
 std::pair<double, double> min_max (const std::vector<double>& vec)
 {
 	double min;
@@ -13,7 +16,7 @@ std::pair<double, double> min_max (const std::vector<double>& vec)
 	}
 	if (vec.size() == 1) {
 		std::cout << "Der Vektor enthält nur ein Element." <<std::endl;
-		return std::make_pair(vec[0], max);
+		return std::make_pair(vec[0], vec[0]);
 	}
 	else {
 		min = vec[0];
@@ -46,8 +49,8 @@ std::vector<double> reversed (const std::vector<double>& vec)
 
 void round (std::vector<double>& vec)
 {
-	for(auto& i: vec)
-		i = std::round(i);
+	for(auto& i: vec)			// hier auto& benutzen, da die elemente verändert werden sollen
+		i = std::round(i);		// ohne &, also nur auto würde eine kopie erzeugen und die originale bleiben unverändert
 }
 
 void reversed2 (std::vector<double>& vec)
@@ -66,8 +69,8 @@ void reversed2 (std::vector<double>& vec)
 
 int main()
 {
-	std::vector <double> v1;
-	std::vector <double> v2(10);
+	std::vector <double> v1;		// erzeugen eines leeren vektors
+	std::vector <double> v2(10);	// erzeugen eines 10 stelligen Vektors mit undefinierten einträgen
 	std::vector <double> v3 = {{1.2,8.9,3.6,5.87,7.3,1.9,3.5,6.2,8.25}};
 	std::vector <double> v4 = {{3,74,9,5,8,3}};
 
@@ -96,7 +99,7 @@ int main()
 	std::cout << std::endl;
 
 	round(v3);
-	std::cout << "Abgerundet: ";
+	std::cout << "Gerundet: ";
 	for (auto i : v3)
 		std::cout << i << " ";
 	std::cout << std::endl;
