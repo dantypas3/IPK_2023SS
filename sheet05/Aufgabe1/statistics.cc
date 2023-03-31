@@ -3,6 +3,7 @@
 
 // mittelwert des vektors
 double mean(const std::vector<double>& v){
+    if(v.size() == 0) return 0;
     double sum = 0;
 
     for(double entry : v) {
@@ -20,12 +21,12 @@ double median(const std::vector<double>& v){
     std::sort(temp.begin(), temp.end());
 
     if(temp.size() % 2 == 1) {      // falls ungerade
-        int index = (temp.size() + 1) / 2;
+        int index = temp.size() / 2;
         return temp[index];
     }
     else {                          // falls gerade
-        int index = temp.size() / 2;
-        return (temp[index] + temp[index + 1]) / 2;
+        int index = (temp.size() / 2) -1;
+        return (temp[index] + temp[index+1]) / 2;
     }
 }
 

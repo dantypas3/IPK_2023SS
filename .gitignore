@@ -14,3 +14,7 @@ cmake-build-debug/
 # Projekt dateien
 *.geany
 .vscode/
+
+# cmake dateien
+**/[Bb]uild-release/
+**/[Bb]uild/
