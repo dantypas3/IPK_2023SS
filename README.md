@@ -5,7 +5,7 @@
 [Vorlesungs-Website](https://scoop.iwr.uni-heidelberg.de/teaching/2023ss/grundkurscpp/)
 
 Mail an [Prof](mailto:Andreas.Naumann@uni-heidelberg.de)  
-Mail an [Dionysios](mailto:dionysios.antypas@stud.uni-heidelberg.de)  
+Mail an [Dionysios](mailto:antypas@stud.uni-heidelberg.de)  
 Mail an [Timo](mailto:timo.braungardt@stud.uni-heidelberg.de)
 
 ## Pool Konten
