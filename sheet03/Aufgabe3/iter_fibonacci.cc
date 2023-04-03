@@ -16,7 +16,7 @@ int32_t fibonacci_iter (int32_t number)
 		f2 = fn;
 	}
 	
-	return f1;
+	return f2;
 }
 
 int main(int argc, char* argv[]) {

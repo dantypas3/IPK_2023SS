@@ -2,8 +2,9 @@
 
 long int fibonacci_rec (int number)
 {
-	if (number <= 1) return 0;
-	if (number == 2) return 1;
+	if (number == 0 or number == 1)
+		return number;
+	else
 	return fibonacci_rec(number - 1) + fibonacci_rec(number - 2);
 }
 

@@ -46,7 +46,7 @@ int iterative_cool (int q, int n)
 			return res*res;
 		}
 		else {
-			for (int i = 0; i < (n-1) / 2; i++) {
+			for (int i = 0; i < (n-1)/2; i++) {
 				res *= q;
 			}
 			res *= res;
@@ -66,10 +66,10 @@ int recursive_cool (int q, int n)
 	}
 	else {
 		if (n % 2 == 0) {
-			return (recursive_cool(q, n/2 - 1)*q) * (recursive_cool(q, n/2 - 1)*q);
+			return (recursive_cool(q, n / 2 - 1) * q) * ( recursive_cool(q, n / 2 - 1) * q);
 		}
 		else {
-			return recursive_cool(q, n-1) * q;
+			return recursive_cool(q, n - 1) * q;
 		}
 	}
 }

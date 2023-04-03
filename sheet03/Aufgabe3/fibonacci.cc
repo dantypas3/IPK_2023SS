@@ -13,22 +13,25 @@ long int fibonacci_iter (int number)
 		return 0;
 	}
 
+	std::cout << 1 << " ";
+	
 	for (int i = 1; i < number; i++) {
 		fn = f1 + f2;
 		f1 = f2;
 		f2 = fn;
-		std::cout << f1 << " ";
+		std::cout << f2 << " ";
 	}
 
 	std::cout << std::endl;
 
-	return f1;
+	return f2;
 }
 
 long int fibonacci_rec (int number)
 {
-	if (number <= 1) return 0;
-	if (number == 2) return 1;
+	if (number == 1 or number == 0)
+		return number;
+	else
 	return fibonacci_rec(number - 1) + fibonacci_rec(number - 2);
 }
 
