@@ -5,20 +5,21 @@
 #include <algorithm>  
 #include <cmath>
 
-template <class T1, class T2> T1 mean(const T2& v)
+template <class T2> auto mean(const T2& v)
 {
-	if(v.size() == 0) return 0;
+	using T1 = typename T2::value_type;
+	if(v.size() == 0) return (T1)0;
 	T1 sum = 0;
 
 	for(auto& entry : v) {
 		sum += entry;
 	}
-	return sum / v.size();
+	return (T1)(sum / v.size());
 }
 
 template <class T1, class T2> T1 median(const T2& v)
 {
-	if(v.size() == 0) return 0;
+	if(v.size() == 0) return 0.0;
 
 	T2 temp = v;
 	std::sort(temp.begin(), temp.end());
