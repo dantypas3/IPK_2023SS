@@ -18,3 +18,5 @@ cmake-build-debug/
 # cmake dateien
 **/[Bb]uild-release/
 **/[Bb]uild/
+**/[Bb]uilt-release/
+**/[Bb]uilt/
