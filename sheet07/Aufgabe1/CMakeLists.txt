@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Start project and set its name to vectors
-project(vectors LANGUAGES CXX)
+project(points LANGUAGES CXX)
 
 # Force compiler to run in C++14 mode
 set(CMAKE_CXX_STANDARD 14)

@@ -9,8 +9,8 @@
 
 template<typename Coord, int dim>
 class Point {
-
-//using Coord Coordinate      // export of the coordinate type
+    // funktioniert nicht bzw. kein plan wie man es von auserhalb aufrufen kann...
+    using Coordinate = Coord;      // export of the coordinate type
 
 private:
     std::array<Coord, dim> coordinates;
@@ -50,8 +50,12 @@ public:
     }
 
     const Coord& operator[] (int i) const {
+        //coordinates[i] = 5;     // compiler error, can't change value in const function
         return coordinates[i];
     }
+
+    // const Coord& makes the datatype Coord constant - it can't be changed
+    // operator[](...) const makes the function constant - it can't change values of the class - compiler errror
 };
 
 #endif

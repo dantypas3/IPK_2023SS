@@ -23,5 +23,5 @@ int main() {
     assert(4.2 == p3[1]);
     assert(12 == p3[2]);
 
-    assert(std::abs(13.13506757 - p3.norm()) >= 1e-7);
+    assert(std::abs(13.13506757 - p3.norm()) <= 1e-7);
 }
