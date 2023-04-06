@@ -25,7 +25,7 @@ int main() {
 
   std::list<float> float_list;
   std::copy(vec.begin(), vec.end(), std::back_inserter(float_list));
-  //std::cout << "robust_median: " << robust_median(float_list) << std::endl;
+  std::cout << "robust_median: " << robust_median(float_list) << std::endl;
 
   return 0;
 }

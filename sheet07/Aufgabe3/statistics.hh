@@ -4,6 +4,8 @@
 #include <vector>
 #include <algorithm>  
 #include <cmath>
+#include <map>
+#include <unordered_map>
 
 template <class T2> auto mean(const T2& v)
 {
@@ -55,6 +57,27 @@ template <class T1, class T2> T1 standard_deviation(const T2& v)
 	}
 	sum = sum / v.size();
 	return std::sqrt(sum);
+}
+
+
+template <typename Container>  typename Container::value_type robust_median(const Container& c)
+{
+	using val = typename Container::value_type; //Name alias for the value type of the container
+	std::vector<val> values;  //Vector which stores the values of the container
+
+
+	values.resize(c.size());
+	int size = values.size();
+	
+	std::copy(c.begin(), c.end(), values.begin());
+	std::sort(values.begin(), values.end());
+
+	//Median wird berechnet
+	if(size % 2 == 0)
+		return (values [size / 2 - 1] + values[size / 2]) / 2;
+	else
+		return values[size / 2];
+
 }
 
 #endif
