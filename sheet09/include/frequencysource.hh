@@ -53,7 +53,7 @@ private:
 
 
 /**
- * Construct a StreamLetterSource for a givn stream
+ * Construct a StreamLetterSource for a given stream
  */
 template<typename Stream>
 StreamLetterSource<Stream> streamLetterSource(Stream& stream)
