@@ -33,11 +33,11 @@ int main() {
 
     // bsp. für memory leak - mit htop anschauen wie der Memory verbrauch wächst
     u_int64_t* point = nullptr;
-    for (int i = 0; i < 999999; i++){
+    for (int i = 0; i < 0; i++){
         point = new u_int64_t;
         std::cout << i << " " << *point << std::endl;   // man muss was mit dem Wert machen, sonst wirds rausoptimiert
     }
     
-    std::cout << "Drücke STRG + D";
+    std::cout << "Drücke STRG + D" << std::endl;
     std::cin >> *point;
 }
